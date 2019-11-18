@@ -1,5 +1,19 @@
-.title {
-  width: 390px;
-  margin-left: 40px;
-  font-size: 22px;
+@import 'util/_screen';
+
+.main-form {
+  padding: 50px 0;
+
+  @media @screen-lt-md {
+    padding: 20px 0;
+  }
+}
+
+@media @screen-lt-md {
+  .main-form-item {
+    margin: 10px;
+  }
+}
+
+.search-list-item {
+  margin: 10px;
 }

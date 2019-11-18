@@ -1,0 +1,22 @@
+@page-min-width: 320px;
+
+@breakpoint-xs-end: (@breakpoint-sm-start - 1px);
+@breakpoint-sm-start: 576px;
+@breakpoint-sm-end: (@breakpoint-md-start - 1px);
+@breakpoint-md-start: 768px;
+@breakpoint-md-end: (@breakpoint-lg-start - 1px);
+@breakpoint-lg-start: 992px;
+@breakpoint-lg-end: (@breakpoint-xl-start - 1px);
+@breakpoint-xl-start: 1200px;
+
+@screen-gt-xs: ~'(min-width: @{breakpoint-sm-start})';
+@screen-lt-sm: ~'(max-width: @{breakpoint-xs-end})';
+@screen-sm: ~'(min-width: @{breakpoint-sm-start}) and (max-width: @{breakpoint-sm-end})';
+@screen-gt-sm: ~'(min-width: @{breakpoint-md-start})';
+@screen-lt-md: ~'(max-width: @{breakpoint-sm-end})';
+@screen-md: ~'(min-width: @{breakpoint-md-start}) and (max-width: @{breakpoint-md-end})';
+@screen-gt-md: ~'(min-width: @{breakpoint-lg-start})';
+@screen-lt-lg: ~'(max-width: @{breakpoint-md-end})';
+@screen-lg: ~'(min-width: @{breakpoint-lg-start}) and (max-width: @{breakpoint-lg-end})';
+@screen-gt-lg: ~'(min-width: @{breakpoint-xl-start})';
+@screen-lt-xl: ~'(max-width: @{breakpoint-lg-end})';

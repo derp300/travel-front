@@ -25,14 +25,14 @@ if (process.env.NODE_ENV === "development") {
 }
 
 const configureStore = preloadedState =>
-createStore(rootReducer(history), preloadedState, middleware);
+    createStore(rootReducer(history), preloadedState, middleware);
 
 const stateFromLocalStorage = loadState();
 const store = configureStore(stateFromLocalStorage);
 store.subscribe(
     throttle(() => {
         saveState(store.getState());
-}, 1000)
+    }, 1000)
 );
 
 export default store;
